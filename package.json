@@ -1,0 +1,28 @@
+{
+  "name": "learning-doc",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "dependencies": {
+    "concurrently": "^6.1.0",
+    "express": "^4.17.1",
+    "firebase": "^9.6.1",
+    "firebase-admin": "^10.0.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.0"
+  },
+  "scripts": {
+    "server": "cd backend && yarn start",
+    "frontend": "cd frontend && yarn start",
+    "start": "concurrently \"yarn server\" \"yarn frontend\""
+  }
+}
